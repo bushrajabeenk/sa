@@ -1,8 +1,11 @@
 import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useToast } from "@chakra-ui/react";
 
 const PeopleCard = (el) => {
+  const toast = useToast();
+  const position = ["top"];
   let charArr = JSON.parse(localStorage.getItem("charName")) || [];
 
   const postToLocalStorage = () => {
@@ -24,7 +27,20 @@ const PeopleCard = (el) => {
           </Link>
         </Box>
         <Box p="4" bg="yellow.400" color="white">
-          <Button id="btn" bg="blue" onClick={postToLocalStorage}>
+          <Button
+            id="btn"
+            bg="blue"
+            onClick={() => {
+              postToLocalStorage();
+              toast({
+                title: `Added to Favorites`,
+                position: position,
+                status: "success",
+                duration: 9000,
+                isClosable: true,
+              });
+            }}
+          >
             Add to Favourites
           </Button>
         </Box>

@@ -1,13 +1,4 @@
-import {
-  Box,
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Spacer,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Spacer, Text, VStack } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -65,7 +56,7 @@ const PeopleDetails = () => {
           p="20px"
           color="white"
         >
-          <Text fontSize="20px" fontWeight="bold" color="black" p="20px">
+          <Text fontSize="25px" fontWeight="bold" color="black" p="20px">
             CHARACTER DETAILS
           </Text>
           <Box>
@@ -90,7 +81,7 @@ const PeopleDetails = () => {
           p="50px"
           color="white"
         >
-          <Text fontSize="20px" fontWeight="bold" color="black" p="20px">
+          <Text fontSize="25px" fontWeight="bold" color="black" p="20px">
             MOVIES APPEARED
           </Text>
           <Box fontSize="20px" p="20px">

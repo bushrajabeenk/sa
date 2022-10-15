@@ -9,12 +9,14 @@ const PeopleCard = (el) => {
   let charArr = JSON.parse(localStorage.getItem("charName")) || [];
 
   const postToLocalStorage = () => {
-    let btn = document.getElementById("btn");
-    btn.style.backgroundColor = "white";
-    btn.style.color = "gray";
     charArr.push(el.name);
     localStorage.setItem("charName", JSON.stringify(charArr));
   };
+
+  const changeBg = (e) => {
+    let btn = e.target.value;
+    btn.style.backgroundColor = "white";
+  }
 
   return (
     <Flex>
@@ -39,6 +41,7 @@ const PeopleCard = (el) => {
                 duration: 9000,
                 isClosable: true,
               });
+              changeBg();
             }}
           >
             Add to Favourites

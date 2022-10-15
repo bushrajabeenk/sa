@@ -14,11 +14,6 @@ const PeopleCard = (el) => {
     localStorage.setItem("charName", JSON.stringify(charArr));
   };
 
-  const changeBg = (e) => {
-    let btn = e.target.value;
-    btn.style.backgroundColor = "white";
-  };
-
   return (
     <Flex>
       <Container maxW="550px" bg="blue">

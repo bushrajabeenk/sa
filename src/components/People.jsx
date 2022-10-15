@@ -45,7 +45,7 @@ const People = () => {
         {character.map((el, i) => {
           return (
             <Text key={i}>
-              <PeopleCard {...el} />
+              <PeopleCard {...el} fav={false} />
             </Text>
           );
         })}

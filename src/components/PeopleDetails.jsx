@@ -56,7 +56,7 @@ const PeopleDetails = () => {
       <Text fontSize="50px" fontWeight="bold" color="blue" p="20px">
         STAR WARS
       </Text>
-      <Flex>
+      <Flex gap={4}>
         <Container
           fontWeight="bold"
           fontSize="15px"
@@ -94,7 +94,7 @@ const PeopleDetails = () => {
             MOVIES APPEARED
           </Text>
           <Box fontSize="20px" p="20px">
-            <Text>{movies}</Text>
+            <Text>{movies.join(", ")}</Text>
           </Box>
         </Container>
       </Flex>

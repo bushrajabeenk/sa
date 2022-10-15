@@ -6,6 +6,9 @@ const PeopleCard = (el) => {
   let charArr = JSON.parse(localStorage.getItem("charName")) || [];
 
   const postToLocalStorage = () => {
+    let btn = document.getElementById("btn");
+    btn.style.backgroundColor = "white";
+    btn.style.color = "gray";
     charArr.push(el.name);
     localStorage.setItem("charName", JSON.stringify(charArr));
   };
@@ -15,11 +18,13 @@ const PeopleCard = (el) => {
       <Container maxW="550px" bg="blue">
         <Box p="4" bg="yellow.400">
           <Link state={el} to={`/people/${el.name}`}>
-            <Text fontSize="20px" fontWeight="bold">{el.name}</Text>
+            <Text fontSize="20px" fontWeight="bold">
+              {el.name}
+            </Text>
           </Link>
         </Box>
         <Box p="4" bg="yellow.400" color="white">
-          <Button bg="blue" onClick={postToLocalStorage}>
+          <Button id="btn" bg="blue" onClick={postToLocalStorage}>
             Add to Favourites
           </Button>
         </Box>

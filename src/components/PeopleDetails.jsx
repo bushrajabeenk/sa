@@ -31,6 +31,7 @@ const PeopleDetails = () => {
             .then((res) => {
               let tit = res.data.title;
               title.push(tit);
+              console.log(title);
               setMovies([...title]);
             })
             .catch((err) => {
@@ -96,7 +97,11 @@ const PeopleDetails = () => {
                 MOVIES APPEARED
               </Text>
               <Box fontSize="20px" p="20px">
-                <Text>{movies.join(", ")}</Text>
+                <Text>
+                  {movies.map((el) => (
+                    <div>{el}</div>
+                  ))}
+                </Text>
               </Box>
             </Container>
           </Flex>

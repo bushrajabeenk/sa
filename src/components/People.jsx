@@ -41,9 +41,9 @@ const People = () => {
       <Text fontSize="50px" fontWeight="bold" color="blue" p="20px">
         STAR WARS
       </Text>
-    <Spacer />
       <Spacer />
-    <Flex>
+      <Spacer />
+      <Flex>
         <Box p="4" bg="yellow.400">
           <Button
             bg="blue"
@@ -72,7 +72,7 @@ const People = () => {
           </Button>
         </Box>
       </Flex>
-<Spacer />
+      <Spacer />
       <Spacer />
       <Container maxW="550px" bg="blue" color="white">
         {character.map((el, i) => {

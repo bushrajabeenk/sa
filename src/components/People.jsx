@@ -41,8 +41,6 @@ const People = () => {
       <Text fontSize="50px" fontWeight="bold" color="blue" p="20px">
         STAR WARS
       </Text>
-      <Spacer />
-      <Spacer />
       <Flex>
         <Box p="4" bg="yellow.400">
           <Button

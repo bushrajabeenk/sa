@@ -37,8 +37,8 @@ const People = () => {
   };
 
   return (
-    <VStack bg="black" padding="40px">
-      <Text fontSize="50px" fontWeight="bold" color="blue" p="20px">
+    <VStack bg="black" padding="35px">
+      <Text fontSize="50px" fontWeight="bold" color="blue" p="15px">
         STAR WARS
       </Text>
       <Flex>

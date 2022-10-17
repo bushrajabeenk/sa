@@ -58,6 +58,7 @@ const People = () => {
           </Button>
         </Box>
         <Spacer />
+        <Spacer />
         <Box p="4" bg="yellow.400">
           <Button
             bg="blue"
